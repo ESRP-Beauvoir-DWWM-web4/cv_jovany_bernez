@@ -1,0 +1,24 @@
+/* la manière moderne de calculer les tailles */
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+   
+  body{
+    margin:0;
+    background: #eee;
+    font-family: 'Space Mono', monospace;
+  }
+  .header-logo{
+    margin:0; 
+    font-size:1em; /* = 16px par défaut */
+  }
+   
+  .header-flex{
+    grid-column: 1/-1; /* ce bloc s'étire sur les colonnes automatiques de la grille */
+    display:flex; /* technique flex pour faire un « trou » */
+    justify-content: space-between; /* le « trou » */
+    align-items: center; /* centrage vertical */
+  }
