@@ -1,63 +1,63 @@
-/* la manière moderne de calculer les tailles */
-html {
-    box-sizing: border-box;
-  }
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-   
-  body{
-    margin:0;
-    background: #eee;
-    font-family: 'Space Mono', monospace;
-  }
-  .header-logo{
-    margin:0; 
-    font-size:1em; /* = 16px par défaut */
-  }
-   
-  .header-flex{
-    grid-column: 1/-1; /* ce bloc s'étire sur les colonnes automatiques de la grille */
-    display:flex; /* technique flex pour faire un « trou » */
-    justify-content: space-between; /* le « trou » */
-    align-items: center; /* centrage vertical */
-  }
+.sidebar {
+    height: 100%;
+    width: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
 
-          /* Styles pour le panneau latéral */
-          .sidebar {
-            height: 100%;
-            width: 60px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            background-color: #111;
-            overflow-x: hidden;
-            transition: 0.5s;
-            padding-top: 60px;
-        }
+.sidebar:hover {
+    width: 250px;
+}
 
-        .sidebar:hover {
-            width: 250px;
-        }
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+}
 
-        .sidebar a {
-            padding: 10px 15px;
-            text-decoration: none;
-            font-size: 18px;
-            color: white;
-            display: block;
-            transition: 0.3s;
-        }
+.sidebar a i {
+    margin-right: 10px;
+}
 
-        .sidebar a:hover {
-            color: #f1f1f1;
-        }
+.sidebar a:hover {
+    color: #f1f1f1;
+}
 
-        .main-content {
-            margin-left: 60px;
-            transition: margin-left 0.5s;
-        }
+.sidebar-text {
+    display: none;
+}
 
-        .sidebar:hover ~ .main-content {
-            margin-left: 250px;
-        }
+.sidebar:hover .sidebar-text {
+    display: inline;
+}
+
+.sidebar-img {
+    display: none;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+}
+
+.sidebar:hover .sidebar-img {
+    display: block;
+}
+
+.main-content {
+    margin-left: 60px;
+    transition: margin-left 0.5s;
+}
+
+.sidebar:hover ~ .main-content {
+    margin-left: 250px;
+}
+
